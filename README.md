@@ -10,7 +10,7 @@
 ```c
 + (AVPlayerLayer *)playerLayerWithPlayer:(nullable AVPlayer *)player
 ```
-- AVPlayerItem、AVPlayer、AVPlayerLayer三者关系，做个类比：
+- AVPlayerItem、AVPlayer、AVPlayerLayer三者关系，做个类比：   
 AVPlayerItem是光盘，AVPlayer是dvd影碟机，AVPlayerLayer是电视机屏幕。
 
 ### 视频播放功能实现
@@ -37,9 +37,9 @@ playerLayer.frame = CGRectMake(0, 50, self.view.frame.size.width, 200);
 ```
 #### 3.监听播放进度
 - 使用`addPeriodicTimeObserverForInterval:queue:usingBlock:`监听播放器的进度，常用于指示播放进度，获取播放时长等信息。
-1）Interval参数表示回调的间隔时间，block是每到一个间隔时间执行一次。
-例如Interval传CMTimeMake(1, 10)，1表示当前有1帧，10表示每秒10帧，1/10=0.1，即player在播放中时每0.1秒执行一次block，包括开始播放、暂停播放也会回调。
-2）方法返回一个观察者对象，当不再播放时，要移除该观察者。
+1）Interval参数表示回调的间隔时间，block是每到一个间隔时间执行一次。   
+例如Interval传CMTimeMake(1,10)，1表示当前有1帧，10表示每秒10帧，1/10=0.1，即player在播放中时每0.1秒执行一次block，包括开始播放、暂停播放也会回调。
+2）方法返回一个观察者对象，当不再播放时，要移除该观察者。   
 添加观察者
 ```c
     self.timeObserve = [self.player addPeriodicTimeObserverForInterval:CMTimeMake(1, 10) queue:dispatch_get_main_queue() usingBlock:^(CMTime time) {
@@ -84,8 +84,11 @@ playerLayer.frame = CGRectMake(0, 50, self.view.frame.size.width, 200);
 ### 项目
 - 以下项目是基于AVPlayer的实际运用，实现音频播放、横竖屏视频切换播放、类似抖音的竖屏全屏播放效果。
 项目地址：[AVPlayerAudioVideo](https://github.com/Johncahong/AVPlayerAudioVideo)
-1.音频播放器效果：
-2.竖屏和横屏的切换效果：
-3.类似抖音竖屏全屏的效果：
-竖屏全屏用UICollectionView实现，只创建了三个UICollectionViewCell视图实例。无论有多少视频需要播放，都是复用这三个UICollectionViewCell视图实例，有效控制内存大小，避免内存加载过大、内存爆满的情况。
+1.音频播放器效果：   
+<div align=center><img width="50%" src="https://raw.githubusercontent.com/Johncahong/AVPlayerAudioVideo/main/readmeImage/IMG_01.png"></div>
+2.竖屏和横屏的切换效果：   
+<div align=center><img width="50%" src="https://raw.githubusercontent.com/Johncahong/AVPlayerAudioVideo/main/readmeImage/IMG_3096.GIF"></div>
+3.类似抖音竖屏全屏的效果：      
+src="https://raw.githubusercontent.com/Johncahong/AVPlayerAudioVideo/main/readmeImage/IMG_3100.GIF"></div>
+竖屏全屏用UICollectionView实现，只创建了三个UICollectionViewCell视图实例。无论有多少视频需要播放，都是复用这三个UICollectionViewCell视图实例，有效控制内存大小，避免内存加载过大、内存爆满的情况。   
 UICollectionViewCell复用时有一个难点，就是记录视频当前已播放的位置，一开始用CMTime来保存发现不行，然后用CMTimeValue和CMTimeScale分别记录也是存在各种问题，后来使用AVPlayerItem来保存已播放位置才彻底解决。
