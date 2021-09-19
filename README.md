@@ -82,19 +82,21 @@ playerLayer.frame = CGRectMake(0, 50, self.view.frame.size.width, 200);
 解决方式：用`seekToTime:toleranceBefore:toleranceAfter:completionHandler:`代替`seekToTime:`，搜索并播放到指定视频帧会有completionHandler的回调，获得该回调后再设置滑块的位置。具体处理细节详见项目。
 
 ### 项目
-- 以下项目是基于AVPlayer的实际运用，实现音频播放、横竖屏视频切换播放、类似抖音的竖屏全屏播放效果。
+- 上干货，以下项目是基于AVPlayer的实际运用，实现音频播放、横竖屏视频切换播放、类似抖音的竖屏全屏播放效果。
 项目地址：[AVPlayerAudioVideo](https://github.com/Johncahong/AVPlayerAudioVideo)   
 
 1.音频播放器效果：   
 
-<div align=center><img width="50%" src="https://raw.githubusercontent.com/Johncahong/AVPlayerAudioVideo/main/readmeImage/IMG_01.png"></div>
+<div align=center><img width="35%" src="https://raw.githubusercontent.com/Johncahong/AVPlayerAudioVideo/main/readmeImage/IMG_01.png"></div>
 
 2.竖屏和横屏的切换效果：   
 
-<div align=center><img src="https://raw.githubusercontent.com/Johncahong/AVPlayerAudioVideo/main/readmeImage/IMG_3096.GIF"></div>
+<div align=center><img src="https://raw.githubusercontent.com/Johncahong/AVPlayerAudioVideo/main/readmeImage/IMG_02.GIF"></div>
 
 3.类似抖音竖屏全屏的效果：      
 
-<div align=center><img src="https://raw.githubusercontent.com/Johncahong/AVPlayerAudioVideo/main/readmeImage/IMG_3100.GIF"></div>
+<div align=center><img src="https://raw.githubusercontent.com/Johncahong/AVPlayerAudioVideo/main/readmeImage/IMG_03.GIF"></div>
 竖屏全屏用UICollectionView实现，只创建了三个UICollectionViewCell视图实例。无论有多少视频需要播放，都是复用这三个UICollectionViewCell视图实例，有效控制内存大小，避免内存加载过大、内存爆满的情况。   
 UICollectionViewCell复用时有一个难点，就是记录视频当前已播放的位置，一开始用CMTime来保存发现不行，然后用CMTimeValue和CMTimeScale分别记录也是存在各种问题，后来使用AVPlayerItem来保存已播放位置才彻底解决。
+
+结语：如果文章和项目对你有帮助，还请给个Star⭐️，你的Star⭐️是我持续输出的动力，谢谢啦(*^▽^*)
