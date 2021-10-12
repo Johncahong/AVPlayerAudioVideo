@@ -46,6 +46,11 @@ static NSString *cellID = @"FullScreenCell";
     
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.collectionView];
+    
+    //监听进入后台
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enterBackground:) name:UIApplicationDidEnterBackgroundNotification object:nil];
+    //监听进入前台
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enterForeground:) name:UIApplicationWillEnterForegroundNotification object:nil];
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -60,6 +65,7 @@ static NSString *cellID = @"FullScreenCell";
     return cell;
 }
 
+//cell刚移入屏幕时回调，indexPath对应刚移入屏幕的cell下标
 -(void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"willDisplayCell:%d", (int)indexPath.item);
 
@@ -72,6 +78,7 @@ static NSString *cellID = @"FullScreenCell";
     self.nextIndexPath = indexPath;
 }
 
+//cell完全移出屏幕时回调，indexPath对应完全移出屏幕的cell下标
 -(void)collectionView:(UICollectionView *)collectionView didEndDisplayingCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath{
 
     NSLog(@"didEndDisplayingCell:%d", (int)indexPath.item);

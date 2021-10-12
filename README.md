@@ -1,3 +1,37 @@
+### 项目概述
+- 项目是基于AVPlayer的实际运用，实现音频播放、横竖屏视频切换播放、类似抖音的竖屏全屏播放效果。
+- 项目地址：[AVPlayerAudioVideo](https://github.com/Johncahong/AVPlayerAudioVideo)    
+如果文章和项目对你有帮助，还请给个Star⭐️，你的Star⭐️是我持续输出的动力，谢谢啦😘   
+
+1.音频播放器效果：   
+
+<div align=center><img width="35%" src="https://raw.githubusercontent.com/Johncahong/AVPlayerAudioVideo/main/readmeImage/IMG_01.png"></div>
+
+2.竖屏和横屏的切换效果：   
+
+<div align=center><img src="https://raw.githubusercontent.com/Johncahong/AVPlayerAudioVideo/main/readmeImage/IMG_02.GIF"></div>
+
+3.类似抖音竖屏全屏的效果：      
+
+<div align=center><img src="https://raw.githubusercontent.com/Johncahong/AVPlayerAudioVideo/main/readmeImage/IMG_03.GIF"></div>
+
+以上“类似抖音竖屏全屏”是采用UICollectionView实现，只创建了三个UICollectionViewCell视图实例。无论有多少视频需要播放，都是复用这三个UICollectionViewCell视图实例，有效控制内存大小，避免内存加载过大、内存爆满的情况。    
+UICollectionViewCell复用时有一个难点，就是记录视频当前已播放的位置，一开始用CMTime来保存发现不行，然后用CMTimeValue和CMTimeScale分别记录也是存在各种问题，后来使用AVPlayerItem来保存已播放位置才彻底解决。
+
+#### 遇到的问题
+- 播放时，扬声器没有声音，插上耳机才有声音。   
+原因是app扬声器默认跟随系统声音模式，而手机调了静音模式，因此扬声器跟随静音模式，没有声音。   
+解决方式：设置Category，让扬声器不跟随系统声音模式。   
+```c
+    //必须设置，否则扬声器默认跟随系统声音模式
+    //AVAudioSessionCategoryPlayAndRecord模式能播放能录音，该模式下声音默认出口是听筒（戴耳机才有声音），切换到扬声器通过以下方式
+    AVAudioSession *session = [AVAudioSession sharedInstance];
+    [session setCategory:AVAudioSessionCategoryPlayAndRecord withOptions:AVAudioSessionCategoryOptionDefaultToSpeaker error:nil];
+```
+- 当反复快速移动滑块时，滑块会出现**跳跃**的现象。   
+这是由于移动滑块时，会调用`seekToTime:`，该方法用于搜索并播放指定视频帧，执行时需要一点时间，不会立马搜索并播放到指定视频帧，此时`addPeriodicTimeObserverForInterval:queue:usingBlock:`回调会设置滑块的位置，出现手指已让滑块移动到某一位置，突然有一瞬间滑块回到之前的位置，然后立马又回到手指停留的位置。   
+解决方式：用`seekToTime:toleranceBefore:toleranceAfter:completionHandler:`代替`seekToTime:`，搜索并播放到指定视频帧会有completionHandler的回调，获得该回调后再设置滑块的位置。具体处理细节详见项目。
+
 ### 什么是AVPlayer
 - AVPlayer存在于AVFoundation框架中，它是一个视频播放器，用来播放视频，但也可以用来播放音乐，播放音乐时不需要实现界面。换句话说，只要掌握了视频播放，音频播放自然就掌握了。
 - AVPlayerItem：和媒体资源存在对应关系，管理媒体资源的信息和状态。它的初始化需要URL或AVAsset。
@@ -66,37 +100,3 @@ playerLayer.frame = CGRectMake(0, 50, self.view.frame.size.width, 200);
     [self.player seekToTime:goalTime toleranceBefore:kCMTimePositiveInfinity toleranceAfter:kCMTimePositiveInfinity completionHandler:^(BOOL finished) {
     }];
 ```
-
-#### 遇到的问题
-- 播放时，扬声器没有声音，插上耳机才有声音。
-原因是app扬声器默认跟随系统声音模式，而手机调了静音模式，因此扬声器跟随静音模式，没有声音。
-解决方式：设置Category，让扬声器不跟随系统声音模式。
-```c
-    //必须设置，否则扬声器默认跟随系统声音模式
-    //AVAudioSessionCategoryPlayAndRecord模式能播放能录音，该模式下声音默认出口是听筒（戴耳机才有声音），切换到扬声器通过以下方式
-    AVAudioSession *session = [AVAudioSession sharedInstance];
-    [session setCategory:AVAudioSessionCategoryPlayAndRecord withOptions:AVAudioSessionCategoryOptionDefaultToSpeaker error:nil];
-```
-- 当反复快速移动滑块时，滑块会出现**跳跃**的现象。
-这是由于移动滑块时，会调用`seekToTime:`，该方法用于搜索并播放指定视频帧，执行时需要一点时间，不会立马搜索并播放到指定视频帧，此时`addPeriodicTimeObserverForInterval:queue:usingBlock:`回调会设置滑块的位置，出现手指已让滑块移动到某一位置，突然有一瞬间滑块回到之前的位置，然后立马又回到手指停留的位置。
-解决方式：用`seekToTime:toleranceBefore:toleranceAfter:completionHandler:`代替`seekToTime:`，搜索并播放到指定视频帧会有completionHandler的回调，获得该回调后再设置滑块的位置。具体处理细节详见项目。
-
-### 项目
-- 上干货，以下项目是基于AVPlayer的实际运用，实现音频播放、横竖屏视频切换播放、类似抖音的竖屏全屏播放效果。
-项目地址：[AVPlayerAudioVideo](https://github.com/Johncahong/AVPlayerAudioVideo)   
-
-1.音频播放器效果：   
-
-<div align=center><img width="35%" src="https://raw.githubusercontent.com/Johncahong/AVPlayerAudioVideo/main/readmeImage/IMG_01.png"></div>
-
-2.竖屏和横屏的切换效果：   
-
-<div align=center><img src="https://raw.githubusercontent.com/Johncahong/AVPlayerAudioVideo/main/readmeImage/IMG_02.GIF"></div>
-
-3.类似抖音竖屏全屏的效果：      
-
-<div align=center><img src="https://raw.githubusercontent.com/Johncahong/AVPlayerAudioVideo/main/readmeImage/IMG_03.GIF"></div>
-竖屏全屏用UICollectionView实现，只创建了三个UICollectionViewCell视图实例。无论有多少视频需要播放，都是复用这三个UICollectionViewCell视图实例，有效控制内存大小，避免内存加载过大、内存爆满的情况。   
-UICollectionViewCell复用时有一个难点，就是记录视频当前已播放的位置，一开始用CMTime来保存发现不行，然后用CMTimeValue和CMTimeScale分别记录也是存在各种问题，后来使用AVPlayerItem来保存已播放位置才彻底解决。
-
-结语：如果文章和项目对你有帮助，还请给个Star⭐️，你的Star⭐️是我持续输出的动力，谢谢啦(*^▽^*)
