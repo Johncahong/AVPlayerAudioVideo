@@ -22,4 +22,11 @@
     return _playerItem;
 }
 
+-(void)setUrlString:(NSString *)urlString{
+    if (urlString != _urlString) {
+        _urlString = urlString;
+        _playerItem = nil;
+    }
+}
+
 @end

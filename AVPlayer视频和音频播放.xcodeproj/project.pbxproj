@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA9F1674446A429F0A76DED0 /* libPods-AVPlayer视频和音频播放.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EAF2088334193B2E4DE5C9 /* libPods-AVPlayer视频和音频播放.a */; };
 		F192778E26EC6234005BE3D2 /* HRRotateVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F192778D26EC6234005BE3D2 /* HRRotateVideoViewController.m */; };
 		F192779126EC625E005BE3D2 /* HRMusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F192779026EC625E005BE3D2 /* HRMusicViewController.m */; };
 		F193443F26EB5CC1005AA3FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F193443E26EB5CC1005AA3FD /* AppDelegate.m */; };
@@ -58,6 +59,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14908E1C02437C8A2EA7C143 /* Pods-AVPlayer视频和音频播放.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVPlayer视频和音频播放.release.xcconfig"; path = "Target Support Files/Pods-AVPlayer视频和音频播放/Pods-AVPlayer视频和音频播放.release.xcconfig"; sourceTree = "<group>"; };
+		58EAF2088334193B2E4DE5C9 /* libPods-AVPlayer视频和音频播放.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AVPlayer视频和音频播放.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93E90C362CF5C38989F4CAD5 /* Pods-AVPlayer视频和音频播放.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVPlayer视频和音频播放.debug.xcconfig"; path = "Target Support Files/Pods-AVPlayer视频和音频播放/Pods-AVPlayer视频和音频播放.debug.xcconfig"; sourceTree = "<group>"; };
 		F192778C26EC6234005BE3D2 /* HRRotateVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HRRotateVideoViewController.h; sourceTree = "<group>"; };
 		F192778D26EC6234005BE3D2 /* HRRotateVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HRRotateVideoViewController.m; sourceTree = "<group>"; };
 		F192778F26EC625E005BE3D2 /* HRMusicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HRMusicViewController.h; sourceTree = "<group>"; };
@@ -75,10 +79,10 @@
 		F193444E26EB5CC7005AA3FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F193444F26EB5CC7005AA3FD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F193445526EB5CC7005AA3FD /* AVPlayer视频和音频播放Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AVPlayer视频和音频播放Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F193445926EB5CC7005AA3FD /* AVPlayer_______Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AVPlayer_______Tests.m"; sourceTree = "<group>"; };
+		F193445926EB5CC7005AA3FD /* AVPlayer_______Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVPlayer_______Tests.m; sourceTree = "<group>"; };
 		F193445B26EB5CC8005AA3FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F193446026EB5CC8005AA3FD /* AVPlayer视频和音频播放UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AVPlayer视频和音频播放UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F193446426EB5CC8005AA3FD /* AVPlayer_______UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AVPlayer_______UITests.m"; sourceTree = "<group>"; };
+		F193446426EB5CC8005AA3FD /* AVPlayer_______UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVPlayer_______UITests.m; sourceTree = "<group>"; };
 		F193446626EB5CC8005AA3FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F193AAF126F2D8BB00F3CBE7 /* HRFullVideoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HRFullVideoModel.h; sourceTree = "<group>"; };
 		F193AAF226F2D8BB00F3CBE7 /* HRFullVideoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HRFullVideoModel.m; sourceTree = "<group>"; };
@@ -116,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA9F1674446A429F0A76DED0 /* libPods-AVPlayer视频和音频播放.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +141,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B99CA6460026AF3C3A4D74C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				58EAF2088334193B2E4DE5C9 /* libPods-AVPlayer视频和音频播放.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		53353E93249A77FFFF4EF75E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				93E90C362CF5C38989F4CAD5 /* Pods-AVPlayer视频和音频播放.debug.xcconfig */,
+				14908E1C02437C8A2EA7C143 /* Pods-AVPlayer视频和音频播放.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F193443126EB5CC1005AA3FD = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +166,8 @@
 				F193445826EB5CC7005AA3FD /* AVPlayer视频和音频播放Tests */,
 				F193446326EB5CC8005AA3FD /* AVPlayer视频和音频播放UITests */,
 				F193443B26EB5CC1005AA3FD /* Products */,
+				53353E93249A77FFFF4EF75E /* Pods */,
+				2B99CA6460026AF3C3A4D74C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -280,6 +305,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F193446926EB5CC8005AA3FD /* Build configuration list for PBXNativeTarget "AVPlayer视频和音频播放" */;
 			buildPhases = (
+				04A22817AFC886B69CDC0C04 /* [CP] Check Pods Manifest.lock */,
 				F193443626EB5CC1005AA3FD /* Sources */,
 				F193443726EB5CC1005AA3FD /* Frameworks */,
 				F193443826EB5CC1005AA3FD /* Resources */,
@@ -407,6 +433,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04A22817AFC886B69CDC0C04 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AVPlayer视频和音频播放-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F193443626EB5CC1005AA3FD /* Sources */ = {
@@ -596,6 +647,7 @@
 		};
 		F193446A26EB5CC8005AA3FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93E90C362CF5C38989F4CAD5 /* Pods-AVPlayer视频和音频播放.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -615,6 +667,7 @@
 		};
 		F193446B26EB5CC8005AA3FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14908E1C02437C8A2EA7C143 /* Pods-AVPlayer视频和音频播放.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

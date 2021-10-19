@@ -40,6 +40,7 @@
     
     //http://192.168.3.185/音频视频/1.mp4
     NSString *str = @"http://220.249.115.46:18080/wav/Lovey_Dovey.mp4";
+//    NSString *str = @"http://vfx.mtime.cn/Video/2019/03/19/mp4/190319212559089721.mp4";
     
     HRFullVideoModel *model = [[HRFullVideoModel alloc] init];
     model.urlString = str;
@@ -84,4 +85,8 @@
     return self.statusHidden;
 }
 
+-(void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    NSLog(@"%s", __func__);
+}
 @end

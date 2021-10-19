@@ -285,8 +285,17 @@
                                                     <action selector="playClick:" destination="Na7-Bz-k7I" eventType="touchUpInside" id="A2i-cL-akL"/>
                                                 </connections>
                                             </button>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="D36-Go-8lv">
-                                                <rect key="frame" x="58" y="10" width="164" height="31"/>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TIN-wQ-poo">
+                                                <rect key="frame" x="60" y="23" width="160" height="4"/>
+                                                <color key="progressTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="trackTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </progressView>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.20000000000000001" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="D36-Go-8lv">
+                                                <rect key="frame" x="58" y="9" width="164" height="31"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="VDK-op-M9Z"/>
+                                                </constraints>
+                                                <color key="maximumTrackTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <connections>
                                                     <action selector="progressSliderChange:forEvent:" destination="Na7-Bz-k7I" eventType="valueChanged" id="Mzh-2J-YH7"/>
                                                 </connections>
@@ -295,17 +304,27 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="2yt-aE-Kb9"/>
-                                            <constraint firstItem="ail-j6-1Pm" firstAttribute="leading" secondItem="S8o-B4-eTl" secondAttribute="leading" constant="50" id="4ht-3D-qqC"/>
+                                            <constraint firstItem="ail-j6-1Pm" firstAttribute="leading" secondItem="S8o-B4-eTl" secondAttribute="leading" constant="50" id="4ht-3D-qqC">
+                                                <variation key="heightClass=compact" constant="20"/>
+                                            </constraint>
                                             <constraint firstAttribute="trailing" secondItem="QrW-VT-dkk" secondAttribute="trailing" constant="110" id="8r6-LV-yUd">
                                                 <variation key="heightClass=compact" constant="50"/>
                                             </constraint>
+                                            <constraint firstItem="TIN-wQ-poo" firstAttribute="centerY" secondItem="ail-j6-1Pm" secondAttribute="centerY" id="BEX-3q-6UB"/>
                                             <constraint firstItem="D36-Go-8lv" firstAttribute="leading" secondItem="ail-j6-1Pm" secondAttribute="trailing" constant="10" id="ET0-A8-UMk">
-                                                <variation key="heightClass=compact" constant="50"/>
+                                                <variation key="heightClass=compact" constant="10"/>
                                             </constraint>
                                             <constraint firstItem="ail-j6-1Pm" firstAttribute="centerY" secondItem="S8o-B4-eTl" secondAttribute="centerY" id="FBI-XE-Gza"/>
-                                            <constraint firstItem="D36-Go-8lv" firstAttribute="centerY" secondItem="ail-j6-1Pm" secondAttribute="centerY" id="MVI-Jc-Gzd"/>
+                                            <constraint firstItem="D36-Go-8lv" firstAttribute="centerY" secondItem="TIN-wQ-poo" secondAttribute="centerY" constant="-1" id="Os6-YH-b9G"/>
+                                            <constraint firstItem="SqX-yZ-P5v" firstAttribute="leading" secondItem="TIN-wQ-poo" secondAttribute="trailing" constant="110" id="QJI-XK-qt2"/>
                                             <constraint firstAttribute="trailing" secondItem="SqX-yZ-P5v" secondAttribute="trailing" constant="50" id="QnM-UL-uoz"/>
+                                            <constraint firstItem="TIN-wQ-poo" firstAttribute="leading" secondItem="ail-j6-1Pm" secondAttribute="trailing" constant="50" id="Tp9-qq-qyO">
+                                                <variation key="heightClass=compact" constant="10"/>
+                                            </constraint>
+                                            <constraint firstItem="QrW-VT-dkk" firstAttribute="leading" secondItem="TIN-wQ-poo" secondAttribute="trailing" id="WQr-D8-Qf8"/>
                                             <constraint firstItem="QrW-VT-dkk" firstAttribute="leading" secondItem="D36-Go-8lv" secondAttribute="trailing" id="YxH-ci-xIc"/>
+                                            <constraint firstItem="TIN-wQ-poo" firstAttribute="leading" secondItem="ail-j6-1Pm" secondAttribute="trailing" constant="10" id="d3a-nV-PlW"/>
+                                            <constraint firstItem="TIN-wQ-poo" firstAttribute="centerY" secondItem="ail-j6-1Pm" secondAttribute="centerY" id="hi8-co-FO5"/>
                                             <constraint firstItem="ail-j6-1Pm" firstAttribute="centerY" secondItem="S8o-B4-eTl" secondAttribute="centerY" id="iWv-44-Bql"/>
                                             <constraint firstItem="QrW-VT-dkk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="D36-Go-8lv" secondAttribute="trailing" id="kTO-dT-dqu"/>
                                             <constraint firstItem="ail-j6-1Pm" firstAttribute="leading" secondItem="S8o-B4-eTl" secondAttribute="leading" constant="10" id="kkX-Ga-E1Y">
@@ -338,8 +357,14 @@
                                                 <exclude reference="FBI-XE-Gza"/>
                                                 <exclude reference="iWv-44-Bql"/>
                                                 <exclude reference="kkX-Ga-E1Y"/>
+                                                <exclude reference="BEX-3q-6UB"/>
+                                                <exclude reference="Tp9-qq-qyO"/>
+                                                <exclude reference="d3a-nV-PlW"/>
+                                                <exclude reference="hi8-co-FO5"/>
                                                 <exclude reference="8r6-LV-yUd"/>
+                                                <exclude reference="WQr-D8-Qf8"/>
                                                 <exclude reference="YxH-ci-xIc"/>
+                                                <exclude reference="QJI-XK-qt2"/>
                                                 <exclude reference="QnM-UL-uoz"/>
                                                 <exclude reference="xEK-O4-PDz"/>
                                             </mask>
@@ -355,7 +380,10 @@
                                                 <include reference="2yt-aE-Kb9"/>
                                                 <include reference="4ht-3D-qqC"/>
                                                 <include reference="iWv-44-Bql"/>
+                                                <include reference="Tp9-qq-qyO"/>
+                                                <include reference="hi8-co-FO5"/>
                                                 <include reference="8r6-LV-yUd"/>
+                                                <include reference="WQr-D8-Qf8"/>
                                                 <include reference="YxH-ci-xIc"/>
                                                 <exclude reference="kTO-dT-dqu"/>
                                                 <include reference="QnM-UL-uoz"/>
@@ -374,6 +402,9 @@
                                                 <include reference="u95-9d-E5j"/>
                                                 <include reference="FBI-XE-Gza"/>
                                                 <include reference="kkX-Ga-E1Y"/>
+                                                <include reference="BEX-3q-6UB"/>
+                                                <include reference="d3a-nV-PlW"/>
+                                                <include reference="QJI-XK-qt2"/>
                                                 <include reference="xEK-O4-PDz"/>
                                             </mask>
                                         </variation>
@@ -483,6 +514,7 @@
                                     <outlet property="bottomBgView" destination="S8o-B4-eTl" id="wTY-Lp-5Cg"/>
                                     <outlet property="playButton" destination="ail-j6-1Pm" id="Xt7-PC-Wek"/>
                                     <outlet property="progressSlider" destination="D36-Go-8lv" id="Mef-Ky-98l"/>
+                                    <outlet property="progressView" destination="TIN-wQ-poo" id="tT3-dB-leb"/>
                                     <outlet property="timeLabel" destination="QrW-VT-dkk" id="de7-TN-rr7"/>
                                 </connections>
                             </view>
@@ -601,7 +633,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oTu-8p-rWe" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="105" y="224"/>
+            <point key="canvasLocation" x="104.8" y="223.53823088455775"/>
         </scene>
         <!--Full Screen View Controller-->
         <scene sceneID="QfY-A3-ObN">
