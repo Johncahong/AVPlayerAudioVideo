@@ -39,6 +39,9 @@
 		F1A0C17226F0D857005D3C6D /* v2.mov in Resources */ = {isa = PBXBuildFile; fileRef = F1A0C16E26F0D857005D3C6D /* v2.mov */; };
 		F1A0C17326F0D857005D3C6D /* v4.mov in Resources */ = {isa = PBXBuildFile; fileRef = F1A0C16F26F0D857005D3C6D /* v4.mov */; };
 		F1A9B5AC26EF7A0A00FF4CEE /* HRNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1A9B5AB26EF7A0A00FF4CEE /* HRNavigationController.m */; };
+		F1AB0ADB271F046500E96D13 /* HR2RotateVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1AB0ADA271F046500E96D13 /* HR2RotateVideoViewController.m */; };
+		F1AB0AE3271F068D00E96D13 /* HRPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F1AB0AE2271F068D00E96D13 /* HRPlayerView.m */; };
+		F1AB0AE6271F069E00E96D13 /* HRPlayerControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = F1AB0AE5271F069E00E96D13 /* HRPlayerControlView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,10 +82,10 @@
 		F193444E26EB5CC7005AA3FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F193444F26EB5CC7005AA3FD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F193445526EB5CC7005AA3FD /* AVPlayer视频和音频播放Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AVPlayer视频和音频播放Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F193445926EB5CC7005AA3FD /* AVPlayer_______Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVPlayer_______Tests.m; sourceTree = "<group>"; };
+		F193445926EB5CC7005AA3FD /* AVPlayer_______Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AVPlayer_______Tests.m"; sourceTree = "<group>"; };
 		F193445B26EB5CC8005AA3FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F193446026EB5CC8005AA3FD /* AVPlayer视频和音频播放UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AVPlayer视频和音频播放UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F193446426EB5CC8005AA3FD /* AVPlayer_______UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVPlayer_______UITests.m; sourceTree = "<group>"; };
+		F193446426EB5CC8005AA3FD /* AVPlayer_______UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AVPlayer_______UITests.m"; sourceTree = "<group>"; };
 		F193446626EB5CC8005AA3FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F193AAF126F2D8BB00F3CBE7 /* HRFullVideoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HRFullVideoModel.h; sourceTree = "<group>"; };
 		F193AAF226F2D8BB00F3CBE7 /* HRFullVideoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HRFullVideoModel.m; sourceTree = "<group>"; };
@@ -113,6 +116,12 @@
 		F1A0C16F26F0D857005D3C6D /* v4.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = v4.mov; sourceTree = "<group>"; };
 		F1A9B5AA26EF7A0900FF4CEE /* HRNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HRNavigationController.h; sourceTree = "<group>"; };
 		F1A9B5AB26EF7A0A00FF4CEE /* HRNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HRNavigationController.m; sourceTree = "<group>"; };
+		F1AB0AD9271F046500E96D13 /* HR2RotateVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HR2RotateVideoViewController.h; sourceTree = "<group>"; };
+		F1AB0ADA271F046500E96D13 /* HR2RotateVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HR2RotateVideoViewController.m; sourceTree = "<group>"; };
+		F1AB0AE1271F068D00E96D13 /* HRPlayerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HRPlayerView.h; sourceTree = "<group>"; };
+		F1AB0AE2271F068D00E96D13 /* HRPlayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HRPlayerView.m; sourceTree = "<group>"; };
+		F1AB0AE4271F069E00E96D13 /* HRPlayerControlView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HRPlayerControlView.h; sourceTree = "<group>"; };
+		F1AB0AE5271F069E00E96D13 /* HRPlayerControlView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HRPlayerControlView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,7 +164,6 @@
 				93E90C362CF5C38989F4CAD5 /* Pods-AVPlayer视频和音频播放.debug.xcconfig */,
 				14908E1C02437C8A2EA7C143 /* Pods-AVPlayer视频和音频播放.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -230,6 +238,8 @@
 				F192779026EC625E005BE3D2 /* HRMusicViewController.m */,
 				F192778C26EC6234005BE3D2 /* HRRotateVideoViewController.h */,
 				F192778D26EC6234005BE3D2 /* HRRotateVideoViewController.m */,
+				F1AB0AD9271F046500E96D13 /* HR2RotateVideoViewController.h */,
+				F1AB0ADA271F046500E96D13 /* HR2RotateVideoViewController.m */,
 				F1A0C16426F0D573005D3C6D /* HRFullScreenViewController.h */,
 				F1A0C16526F0D573005D3C6D /* HRFullScreenViewController.m */,
 			);
@@ -269,6 +279,7 @@
 		F19DDC5726ECBCEA00F323D2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F1AB0AE0271F067800E96D13 /* HRPlayerLib */,
 				F19DDC5B26ECBD2800F323D2 /* HRPlayerVideoView.h */,
 				F19DDC5C26ECBD2800F323D2 /* HRPlayerVideoView.m */,
 				F1A0C16726F0D5B7005D3C6D /* HRFullScreenVideoView.h */,
@@ -296,6 +307,17 @@
 				F193AAF426F329EB00F3CBE7 /* v5.mov */,
 			);
 			path = video;
+			sourceTree = "<group>";
+		};
+		F1AB0AE0271F067800E96D13 /* HRPlayerLib */ = {
+			isa = PBXGroup;
+			children = (
+				F1AB0AE4271F069E00E96D13 /* HRPlayerControlView.h */,
+				F1AB0AE5271F069E00E96D13 /* HRPlayerControlView.m */,
+				F1AB0AE1271F068D00E96D13 /* HRPlayerView.h */,
+				F1AB0AE2271F068D00E96D13 /* HRPlayerView.m */,
+			);
+			path = HRPlayerLib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -467,6 +489,7 @@
 				F1A0C16626F0D573005D3C6D /* HRFullScreenViewController.m in Sources */,
 				F19DDC4826ECB29100F323D2 /* HRSong.m in Sources */,
 				F193444526EB5CC1005AA3FD /* ViewController.m in Sources */,
+				F1AB0AE3271F068D00E96D13 /* HRPlayerView.m in Sources */,
 				F19DDC3F26ECB0F400F323D2 /* HRLrcEach.m in Sources */,
 				F192778E26EC6234005BE3D2 /* HRRotateVideoViewController.m in Sources */,
 				F192779126EC625E005BE3D2 /* HRMusicViewController.m in Sources */,
@@ -474,6 +497,8 @@
 				F193443F26EB5CC1005AA3FD /* AppDelegate.m in Sources */,
 				F19DDC5D26ECBD2800F323D2 /* HRPlayerVideoView.m in Sources */,
 				F193AAF326F2D8BB00F3CBE7 /* HRFullVideoModel.m in Sources */,
+				F1AB0AE6271F069E00E96D13 /* HRPlayerControlView.m in Sources */,
+				F1AB0ADB271F046500E96D13 /* HR2RotateVideoViewController.m in Sources */,
 				F193445026EB5CC7005AA3FD /* main.m in Sources */,
 				F1A9B5AC26EF7A0A00FF4CEE /* HRNavigationController.m in Sources */,
 				F193444226EB5CC1005AA3FD /* SceneDelegate.m in Sources */,

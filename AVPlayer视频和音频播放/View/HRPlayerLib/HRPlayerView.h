@@ -1,8 +1,8 @@
 //
-//  HRPlayerVideoView.h
+//  HRPlayerView.h
 //  AVPlayer视频和音频播放
 //
-//  Created by Hello Cai on 2021/9/11.
+//  Created by Hello Cai on 2021/10/19.
 //
 
 #import <UIKit/UIKit.h>
@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HRPlayerVideoView : UIView
+@interface HRPlayerView : UIView
 
 @property(nonatomic,strong)AVPlayer *player;
 @property(nonatomic,assign)BOOL isPlay;
@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void)play;
 -(void)pause;
+-(void)configViewOrientation:(UIInterfaceOrientation)orientaion;
 @end
 
 NS_ASSUME_NONNULL_END
